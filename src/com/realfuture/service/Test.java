@@ -71,7 +71,6 @@ public class Test {
 
         public void run(){
             for (int port = start; port <= end; port++) {
-//            System.out.print(port);
                 try {
                     InetSocketAddress isa = new InetSocketAddress(address, port);
                     Socket socket = new Socket();
