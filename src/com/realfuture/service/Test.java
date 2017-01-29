@@ -78,7 +78,7 @@ public class Test {
                     opened.add(port);
                     socket.close();
                 } catch (IOException ioe) {
-                    //System.out.println(""+ioe.getMessage());
+                    System.out.println(""+ioe.getMessage());
                 }
             }
         }
