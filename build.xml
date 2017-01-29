@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="current copy task" default="build_all">
+	<property name="work_dir" value="C:/work/apache-tomcat-7.0.55/webapps/app"/>
+	<target name="build_all">
+		<copy todir="${work_dir}" overwrite="true">
+			<fileset dir="./src/web"></fileset>
+		</copy>		
+		<copy todir="${work_dir}/WEB-INF" overwrite="true">
+			<fileset dir="./src/WEB-INF"></fileset>
+		</copy>		
+		<copy todir="${work_dir}/WEB-INF/lib" overwrite="true">
+			<fileset dir="./lib"></fileset>
+		</copy>		
+		<copy todir="${work_dir}/WEB-INF/classes" overwrite="true">
+			<fileset dir="./out/production/app">
+				<exclude name="**/WEB-INF/**"/>
+				<exclude name="**/web/**"/>
+				<exclude name="**/views/**" />
+			</fileset>
+		</copy>
+	</target>
+</project>
