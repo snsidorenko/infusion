@@ -49,7 +49,7 @@
                     contactData.put(m.infusion, m.value);
             }
         }
-// assign new contact for user.id=54
+// assign new contact for user.id = 54
         contactData.put("OwnerID", 54);
         return contactData;
     }
@@ -169,7 +169,7 @@
                 Map mcontact = (Map) o;
                 for(Object f : fields)
                     out.print(mcontact.get(f) + " ");
-                out.println("<br/>");
+                out.println("<br/> ");
             }
         } catch(Exception e) {
             out.print(e.getMessage());

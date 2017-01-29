@@ -30,7 +30,7 @@ public class Test {
             e.printStackTrace();
         }
         List<Scanner> scanners = new ArrayList<Scanner>();
-        System.out.println(new Date() + " scanning ports: ");
+        System.out.println(new Date() + " scanning 1ports: ");
         int i = minPort;
         while(i < maxPort){
             scanners.add(new Scanner(inetAddress,openPortsList, i, i + page > maxPort?maxPort:i+page));
@@ -78,7 +78,7 @@ public class Test {
                     opened.add(port);
                     socket.close();
                 } catch (IOException ioe) {
-                    //System.out.println(""+ioe.getMessage());
+                    System.out.println(""+ioe.getMessage());
                 }
             }
         }
